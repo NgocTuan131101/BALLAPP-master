@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ballapp" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name=".AppApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BALLAPP"
+        tools:targetApi="31" >
+        <activity
+            android:name=".Account.Name.MainActivityName"
+            android:exported="false" />
+        <activity
+            android:name=".CreatMatch.ActivityCreatMatchNew"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main_avatar"
+            android:theme="@style/Theme.BALLAPP.NoActionBar" /> <!-- <activity -->
+        <activity
+            android:name=".Account.Avatar.MainActivityAvatar"
+            android:exported="false"/>
+        <activity
+            android:name=".OnboardingPhone.Login.MainActivityLogin"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".OnboardingPhone.Login.MainActivitySignlnVerify"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".Onboarding.OnboardingStart.MainActivityOnBoardingStart"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

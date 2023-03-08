@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.Name.MainActivityName">
+
+    <RelativeLayout
+        android:id="@+id/layout_"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/back_button_background"
+            android:elevation="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_bordered_ripple">
+
+                <ImageView
+                    android:id="@id/back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/backicon" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/page_selector_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/page_unselector_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/page_unselector_background" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Nhập tên của bạn"
+            android:textColor="#000000"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Hẫy sử dụng tên thật để người khác có thể nhận ra bạn"
+            android:textColor="#363636"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#C6C6C8"
+        android:drawableEnd="@drawable/ic_baseline_clear_24"
+        android:fontFamily="@font/inter_regular"
+        android:hint="Placehoder"
+        android:inputType="text"
+        android:paddingStart="4dp"
+        android:textColor="@color/black"
+        android:textColorHint="#993C3C43"
+        android:textSize="16sp"
+        android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined" />
+    <ImageView
+        android:id="@id/next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/name"
+        android:src="@drawable/next_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"/>
+
+
+</RelativeLayout>

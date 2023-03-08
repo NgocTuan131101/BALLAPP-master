@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:src="@drawable/onboarbinding1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/on_boarding_background"
+        >
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_oboar_title"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/worksans_semibold"
+            android:gravity="center"
+            android:text="Bắt kèo nhanh chống"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_oboar_description"
+            android:layout_below="@id/text_oboar_title"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit"
+            android:textColor="#363636"
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

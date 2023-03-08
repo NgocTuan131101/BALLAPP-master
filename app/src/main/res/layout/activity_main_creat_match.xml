@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true" />-->
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/back_button_background"
+            android:elevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_bordered_ripple">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/backicon" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter_bold"
+            android:text="Tạo trận"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="20dp"
+
+
+       >
+
+        <RelativeLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:ignore="MissingConstraints"
+            >
+
+            <RelativeLayout
+                android:id="@+id/team_iagme_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_bordered_ripple">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="28dp">
+
+                    <ImageView
+                        android:background="@color/white"
+                        android:id="@+id/team_iagme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/baseline_add_photo_alternate_24" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_information"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/team_iagme_layout"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Sân"
+                    android:textColor="#363636"
+                    android:textSize="16dp" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_information_locatiom"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_below="@+id/location"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_background">
+
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/location" />
+
+                    <TextView
+                        android:id="@+id/text_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/location_icon"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Sân Đại Học Khoa Học Huế"
+                        android:textColor="#363636"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/time_select"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/drop_icon" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/time_tile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_information_locatiom"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Thời gian "
+                    android:textColor="#363636"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_below="@id/time_tile"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_background">
+
+                    <ImageView
+                        android:id="@+id/gran_icon"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/dot_green" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/gran_icon"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="18:00"
+                        android:textColor="#363636"
+                        android:textSize="16sp" />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="-"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:layout_toEndOf="@id/time_text_one"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:fontFamily="@font/inter_regular"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:id="@+id/_time_"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_toEndOf="@id/_time_"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:textColor="#363636"-->
+<!--                        android:id="@+id/time_text_twe"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:text="19:00"/>-->
+                    <ImageView
+                        android:id="@+id/add_time"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/drop_icon" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_layout"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ngày"
+                    android:textColor="#363636"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/day_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/day"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/textview_background">
+
+                    <CalendarView
+                        android:id="@+id/calendar"
+                        android:backgroundTint="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dateTextAppearance="@style/CustomCalendarDay"
+                        android:weekDayTextAppearance="@style/CustomCalendarDay" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_people_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_below="@id/day_">
+
+                    <ImageView
+                        android:id="@+id/user_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/user" />
+
+                    <TextView
+                        android:id="@+id/number_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/user_icon"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="Số Người : "
+                        android:textColor="#363636"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@id/people_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@id/number_layout"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="#363636"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_people_number"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Ghi chú"
+                    android:textColor="#363636"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/note_"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_below="@id/note"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/textview_background"
+                    android:fontFamily="@font/inter_regular"
+                    android:inputType="text"
+                    android:paddingStart="16dp"
+                    android:textColorHint="#363636"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined" />
+
+                <Button
+                    android:id="@+id/new_request"
+                    style="@style/Button"
+                    android:layout_below="@+id/note_"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/button_shape"
+                    android:text="Tạo trận" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

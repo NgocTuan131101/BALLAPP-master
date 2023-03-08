@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.FragmentMessagen.chatFragment">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter_bold"
+            android:text="Liên Hệ "
+            android:textColor="#363636"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout">
+
+        <RelativeLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/search_background"
+            android:elevation="12dp">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/new_search_icon" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="44dp"
+                android:layout_toEndOf="@+id/search_icon"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:inputType="text"
+                android:textColor="#7A7A7A"
+                android:textSize="12sp"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/new_filter_icon" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_contact"
+            android:layout_below="@id/search_bar"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_bordered_ripple">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/add_contact"
+                android:id="@+id/add_contact_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm liên hệ mới"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/add_contact_icon"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:layout_below="@+id/add_contact"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:text="Gần đây"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter_semibold" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/recycler_view1"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_2"
+            android:layout_below="@id/recycler_view1"
+            android:layout_marginTop="10dp"
+            android:text="Gần đây"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="16sp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:id="@+id/recycler_view2"
+            android:layout_below="@id/title_2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"/>
+    </RelativeLayout>
+</RelativeLayout>

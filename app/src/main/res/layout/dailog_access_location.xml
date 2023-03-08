@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/loading_dialog_rounded_whilte">
+
+        <ImageView
+            android:id="@+id/access_location"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/access_location" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/access_location"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Truy cập vị trí"
+            android:textColor="#1C1B1F"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hỗ trợ bạn chọn đội và đề xuất sân bóng gần bạn một cách nhanh chóng , chính xác "
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="14sp"
+            android:id="@+id/title_one"
+            android:fontFamily="@font/inter_medium"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/title_one"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="40dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:id="@+id/No"
+                android:layout_marginEnd="30dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="#7A7A7A"
+                android:background="@drawable/custom_bordered_ripple"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:text="Đồng ý"
+                android:background="@drawable/custom_bordered_ripple"
+                android:id="@+id/Yes"
+                android:fontFamily="@font/inter_medium"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
